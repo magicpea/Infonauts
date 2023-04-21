@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="css/style.css">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Orbitron&text=0123456789:AMP' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="script.js"></script>
 <body>
   <!-- Nav Bar -->
-  <header class="header-bar">
+  <!-- <header class="header-bar">
       <nav class="navbar navbar-expand-lg main-nav">
-          <!-- <img src='logohead.png'style="width:40px"/><h3>infonauts</h3> -->
           <div class="container">
               <div class="hamburger-menu"><a href="#"><i class="fa fa-bars" aria-label="menu"></i></a></div>
                   <ul class="navbar-nav mx-auto">
@@ -26,7 +26,7 @@
                   </ul>
               </div>
       </nav>
-    </header>
+    </header> -->
     <div id='intro-container'>
         <div id='binary'>
             <img src='binary2.gif'>
@@ -35,10 +35,18 @@
             <!-- <p style="color:white; padding-top:20%; padding-left: 0%; font-size: 55px; text-align: center">
                 Women publish less than 25% <br >of academic articles related to <br>technology worldwide.
               </p> -->
-              <p style="color:white; padding-top:15%; padding-left: 0%; font-size: 45px; text-align: center">
+              <p style="color:white; padding-top:8%; padding-left: 0%; font-size: 45px; text-align: center">
                 The gender gap in technology will close in
               </p>
-              <p id="demo" style="font-size: 60px; color: white; padding-top: 5%; text-align: center;"></p>
+              <div id="countdown" class="glow">
+                <span id="years"></span>
+                <span id="months"></span>
+                <span id="days"></span>
+                <span id="hours"></span>
+                <span id="minutes"></span>
+                <span id="seconds"></span>
+              </div>
+              <!-- <p id="demo" style="font-size: 60px; color: white; padding-top: 5%; text-align: center;"></p> -->
               <p style="color:white; padding-top:3%; padding-left: 0%; font-size: 30px; padding-bottom: 0; text-align: center; position: static">
                   Let's unpack that.
               </p>
@@ -141,7 +149,8 @@
       see gender equilibrium as a <br>
       realistic possibility.<br>
   </p>
-<script>
+  <iframe title="DataViz" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=e5e2a82e-74fc-463d-9a76-68fb695ae576&autoAuth=true&ctid=f6b6dd5b-f02f-441a-99a0-162ac5060bd2" frameborder="0" allowFullScreen="true"></iframe>a
+<!-- <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Jan 2, 2098 0:0:0").getTime();
 
@@ -165,8 +174,9 @@ var x = setInterval(function() {
   // var years = Math.floor(duration / 3.154e+10);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = years + "\n years " + months + " months " + days + " days " + hours + "hours "
-  + minutes + "minutes " + seconds + "seconds ";
+  // document.getElementById("demo").innerHTML = years  + " years " + months + " months " + days + " days " + hours + "hours "
+  // + minutes + "minutes " + seconds + "seconds ";
+  document.getElementById("demo").innerHTML = years + "<br>years"; + months + "<br>months" + days + "<br>days" +  hours + "<br>hours" + minutes + "<br>seconds" + seconds;
 
   // If the count down is finished, write some text
   if (distance < 0) {
@@ -174,6 +184,43 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
-</script>
+</script> -->
+<script>
+		// Set the date we're counting down to
+		var countDownDate = new Date("2098-01-01T00:00:00").getTime();
+
+		// Update the countdown every second
+		var x = setInterval(function() {
+
+				// Get today's date and time
+				var now = new Date().getTime();
+
+				// Find the distance between now and the countdown date
+				var distance = countDownDate - now;
+
+				// Calculate years, months, days, hours, minutes, and seconds
+        var years = Math.floor(distance / 3.154e+10);
+        var months = Math.floor(distance / 2.628e+9) % 12;
+        var days = Math.floor((distance / (1000 * 60 * 60 * 24 * 365)) /(1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+				// Update the countdown display
+        document.getElementById("years").innerHTML = years + "<br><p>Years</p>";
+        document.getElementById("months").innerHTML = months + "<br><p>Months</p>"
+				document.getElementById("days").innerHTML = days + "<br><p>Days</p>";
+				document.getElementById("hours").innerHTML = hours + "<br><p>Hours</p>";
+				document.getElementById("minutes").innerHTML = minutes + "<br><p>Minutes</p>";
+				document.getElementById("seconds").innerHTML = seconds + "<br><p>Seconds</p>";
+
+				// If the countdown is finished, show a message
+				if (distance < 0) {
+					clearInterval(x);
+					document.getElementById("countdown").innerHTML = "EXPIRED";
+				}
+		}, 1000);
+	</script>
+
 </body>
 </html>
