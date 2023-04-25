@@ -1,0 +1,21 @@
+[debug] [2023-04-25T05:44:42.477Z] ----------------------------------------------------------------------
+[debug] [2023-04-25T05:44:42.480Z] Command:       /Users/marieoconnell/.nvm/versions/node/v20.0.0/bin/node /Users/marieoconnell/.nvm/versions/node/v20.0.0/bin/firebase init
+[debug] [2023-04-25T05:44:42.481Z] CLI Version:   11.28.0
+[debug] [2023-04-25T05:44:42.481Z] Platform:      darwin
+[debug] [2023-04-25T05:44:42.481Z] Node Version:  v20.0.0
+[debug] [2023-04-25T05:44:42.481Z] Time:          Mon Apr 24 2023 22:44:42 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-04-25T05:44:42.481Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-25T05:44:42.488Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-25T05:44:42.489Z] > authorizing via signed-in user (magicpea@uw.edu)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/marieoconnell/Desktop/Infonauts/public/website
+
