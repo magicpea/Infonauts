@@ -284,6 +284,71 @@ p {
   animation: glow 1s ease-in-out infinite alternate;
 }
 
+.img-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container {
+  float: left;
+  position: relative;
+  width: 25%;
+  display: inline-block;
+}
+
+.image img {
+  width: 100%;
+  height: 3in;
+}
+
+.image {
+  float: left;
+}
+
+.title {
+  width: 30%;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+
+#anchor5 {
+  box-sizing: border-box;
+  background: black;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+
+.column p {
+  font-size: 15px;
+  font-weight: lighter;
+  margin-bottom: 0;
+}
+
+#anchor5 p, #anchor5 h1, #anchor h5 {
+  color: white;
+}
+
+#anchor5 h5 {
+  padding-top: 5%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#anchor5 a {
+  font-size: 15px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /* @-webkit-keyframes glow {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
 } */
