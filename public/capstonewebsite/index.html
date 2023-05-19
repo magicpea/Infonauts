@@ -155,12 +155,12 @@
       <a href="stats-container-2"><img src='scroll.gif' style="width: 70px; margin-left: 47.5%; padding-top: 5%; padding-bottom: 4%;" /></a>
   </div>
   </div>
-  <div id='overlay4'>
+  <!-- <div id='overlay4'>
     <div id='tech'>
         <img src="techgif3.gif" style="width: 100%; height: 750px;">
     </div>
     <h1>How have female to male ratios changed?</h1>
-  </div>
+  </div> -->
   <!-- <p style="text-align: center; padding-right: 10%; padding-left: 10%; padding-top: 3%;font-size: 25px; color: #363232; font-weight: bolder">The next interactive chart displays the average ratio of female authors to male authors per academic publication by year from 1955 to 2023. To view exact values, click on any part of the graph.</p> -->
   <!-- <div class="flourish-embed flourish-chart" data-src="visualisation/13610715"><script src="https://public.flourish.studio/resources/embed.js"></script></div> -->
   <!-- RATIOS CHART -->
@@ -173,8 +173,8 @@
   <!-- <div class="flourish-embed flourish-chart" data-src="visualisation/13729205" style="padding: 5%;"><script src="https://public.flourish.studio/resources/embed.js"></script></div> -->
   <div id='anchor2'style="background: black">
     <h1 style="color:white; font-family: 'Source Code Pro', monospace; padding-top: 5%; text-align: center;">Where does our data come from?</h1>
-    <img src="spinningearth.gif"style="float: right; height: 430px; margin-top: 5%; padding-bottom: 5%;"/>
-    <p style="margin-left: 10%; float:left; padding-top: 7%; color: white; font-size: 23px;">
+    <!-- <img src="spinningearth.gif"style="float: right; height: 430px; margin-top: 5%; padding-bottom: 5%;"/> -->
+    <!-- <p style="margin-left: 10%; float:left; padding-top: 7%; color: white; font-size: 23px;">
       The data we are using comes from the database<br>
       systems and logic programming research group at<br>
       the University of Trier in Germany. Today, this<br>
@@ -184,6 +184,13 @@
       articles, books, academic journals, and other<br>
       published academic texts from around the world.<br>
       To learn more about the DBLP, click <a href="https://dblp.org/">here.</a>
+    </p> -->
+    <p style="color: white; font-size: 25px; padding: 10%; text-align: center;">
+        We downloaded our data from the <a href="https://dblp.org/">DBLP computer science bibliographic database.</a> It contains data on over six and a half million publications, and works from over 3 million authors. The raw data came in an XML file that we converted to a csv file using <a href="https://github.com/ThomHurks/dblp-to-csv">this Python package.</a>
+        <br><br><br>
+        Because all of our data did not include any information about the gender of the authors included, we decided to use the <a href="https://pypi.org/project/gender-guesser/">Gender Guesser Python package. </a>It uses the first name of a person, and returns a result of male, mostly male, female, mostly female, androgynous, or unknown. In order to reduce the potential harm that could come from incorrectly guessing an author’s gender, we chose to only use the data points that returned as either male or female. To ensure the accuracy of the package on our data, we hand-checked the gender identity of one hundred authors included in our dataset, and the gender returned by the package was correct in one hundred percent of the cases. Due to this, we felt comfortable proceeding with our analysis using these predicted gender outputs.
+        <br><br><br>
+        Once we had the data in an accessible format, we got rid of any columns where the majority of data points were missing. We also converted dates to be properly formatted, and used one-hot encoding where necessary. We then did various straight-forward calculations using different columns and data points to create the visualizations we have displayed on this site. In order to create our linear regression model, we simply summed the ratio of female authors to male authors over each year included in our data set, and used that ratio to predict how that ratio would change over time. According to our model, the community of tech authors will reach gender parity in 2098. This date is consistent with what the World Economic Forum has forecasted for this industry.
     </p>
     <a href="#explore-container"><img src='scroll.gif' style="width: 70px; margin-left: 47.5%; padding-top: 5%; padding-bottom: 4%;" /></a>
   </div>
