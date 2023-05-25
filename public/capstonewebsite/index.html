@@ -95,6 +95,10 @@
     </div> -->
     <div id='anchor1' style="height: 1100px; background: black;">
         <div class="flourish-embed flourish-chart" data-src="visualisation/13729205" style="padding: 7%; background-color: black;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        <button class="collapsible">Click to view more information   </button>
+        <div class="content">
+        <p>Here, we can see the changes in growth rates amonng female and male authors in computer science related fields. It is clear that growth rates were higher in the years right after 2000 but had a sharp decline in 2011. Rates went backwards in 2021, which we can assume is likely due to the global pandemic. Use the buttons above the legend at the top to view individual genders.</p>
+        </div>
       <br>
       <a href="#intro-stats-container"><img src='scroll.gif' style="width: 70px; margin-left: 47.5%; padding-bottom: 0%; background-color: black;" /></a>
       <div id="gradient3" style="height: 100px;">
@@ -124,6 +128,27 @@
   <div id='stats-container-12' style="background-color: black;">
      <!-- MALE AND FEMALE GROWTH RATE PER YEAR -->
   <div class="flourish-embed flourish-chart" data-src="visualisation/13501000" style="background-color: black;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+  <button class="collapsible">Click to view more information   </button>
+  <div class="content">
+  <p>Here, we can see the changes in growth rates amonng female and male authors in computer science related fields. It is clear that growth rates were higher in the years right after 2000 but had a sharp decline in 2011. Rates went backwards in 2021, which we can assume is likely due to the global pandemic. Use the buttons above the legend at the top to view individual genders.</p>
+  </div>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+    </script>
+
   <!-- <p style="text-align: center; padding-right: 10%; padding-left: 10%; padding-top: 3%;font-size: 25px; color: #363232; font-weight: bolder">The chart above is an interactive visualization of the rate of growth in male and female technology authorship by year. Please feel free to click around and explore the data.</p> -->
   <!-- <div id='intro-stats-container'>
     <img src="viz2.png" style="width: 60%; padding-top: 6%"/>
@@ -183,6 +208,10 @@
 </div>
   <div id='stats-container-57' style="background-color: black;">
       <div class="flourish-embed flourish-chart" data-src="visualisation/13610708" style="padding: 5%; background-color: black;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+      <button class="collapsible">Click to view more information   </button>
+      <div class="content">
+      <p>Here, we can see the changes in growth rates amonng female and male authors in computer science related fields. It is clear that growth rates were higher in the years right after 2000 but had a sharp decline in 2011. Rates went backwards in 2021, which we can assume is likely due to the global pandemic. Use the buttons above the legend at the top to view individual genders.</p>
+      </div>
   <!-- <a href="stats-container-2"><img src='scroll.gif' style="width: 70px; padding-left: 47.5%; padding-top: 5%; padding-bottom: 4%; background-color: black;" /></a> -->
       <a href="#intro-stats-container"><img src='scroll.gif' style="width: 70px; margin-left: 47.5%; padding-top: 5%; padding-bottom: 0%;" /></a>
   </div>
