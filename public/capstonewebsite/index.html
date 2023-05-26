@@ -46,8 +46,8 @@
             <!-- <p style="color:white; padding-top:20%; padding-left: 0%; font-size: 55px; text-align: center">
                 Women publish less than 25% <br >of academic articles related to <br>technology worldwide.
               </p> -->
-              <p style="color:white; padding-top:8%; padding-left: 0%; font-size: 45px; text-align: center; font-weight: bolder;">
-                The gender gap in technology will close in
+              <p style="color:white; padding-top:6%; padding-left: 8%; padding-right: 8%; font-size: 45px; text-align: center;">
+                The gender gap in computer science authorship will close in
               </p>
               <div id="countdown" class="glow">
                 <span id="years"></span>
@@ -97,7 +97,7 @@
         <div class="flourish-embed flourish-chart" data-src="visualisation/13729205" style="padding: 7%; background-color: black;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
         <button class="collapsible">Click to view more information   </button>
         <div class="content">
-        <p>Here, we can see the changes in growth rates amonng female and male authors in computer science related fields. It is clear that growth rates were higher in the years right after 2000 but had a sharp decline in 2011. Rates went backwards in 2021, which we can assume is likely due to the global pandemic. Use the buttons above the legend at the top to view individual genders.</p>
+        <p id='collapsible-p'>By performing a linear regression, we were able to determine when the gender gap in computer science authorship will reach an equilibrium, if trends continue as they have been. The blue bars represent historical data, while the purple regression line represents our future estimate, which is in line with existing estimates. As visible in the chart, parity is expected to be achieved in the year 2097. </p>
         </div>
       <br>
       <a href="#overlay2"><img src='scroll.gif' style="width: 70px; margin-left: 47.5%; padding-bottom: 0%; background-color: black;" /></a>
@@ -130,25 +130,9 @@
   <div id="tester" class="flourish-embed flourish-chart" data-src="visualisation/13501000" style="background-color: black;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
   <button class="collapsible">Click to view more information   </button>
   <div class="content">
-  <p>Here, we can see the changes in growth rates amonng female and male authors in computer science related fields. It is clear that growth rates were higher in the years right after 2000 but had a sharp decline in 2011. Rates went backwards in 2021, which we can assume is likely due to the global pandemic. Use the buttons above the legend at the top to view individual genders.</p>
+  <p id='collapsible-p'>Here we compared the number of female authors on an existing paper to the number of male authors on the same paper. By dividing the number of female authors by the total authors, we achieve the yearly average female proportion of authors per paper. As evidenced by the results, the proportion of females is abysmally low.
+  </p>
   </div>
-  <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight){
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-        }
-      });
-    }
-    </script>
-
   <!-- <p style="text-align: center; padding-right: 10%; padding-left: 10%; padding-top: 3%;font-size: 25px; color: #363232; font-weight: bolder">The chart above is an interactive visualization of the rate of growth in male and female technology authorship by year. Please feel free to click around and explore the data.</p> -->
   <!-- <div id='intro-stats-container'>
     <img src="viz2.png" style="width: 60%; padding-top: 6%"/>
@@ -212,7 +196,7 @@
       <div class="flourish-embed flourish-chart" data-src="visualisation/13610708" style="padding: 5%; background-color: black;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
       <button class="collapsible">Click to view more information   </button>
       <div class="content">
-      <p>Here, we can see the changes in growth rates amonng female and male authors in computer science related fields. It is clear that growth rates were higher in the years right after 2000 but had a sharp decline in 2011. Rates went backwards in 2021, which we can assume is likely due to the global pandemic. Use the buttons above the legend at the top to view individual genders.</p>
+      <p id='collapsible-p'>This visual shows the average ratio of female to male collaborators per publication over the years. You can see that the ratio has steadily increased over the years, but is still at an extremely low rate, around .2. </p>
       </div>
   <!-- <a href="stats-container-2"><img src='scroll.gif' style="width: 70px; padding-left: 47.5%; padding-top: 5%; padding-bottom: 4%; background-color: black;" /></a> -->
       <a href='#anchor99'><img src='scroll.gif' style="width: 70px; margin-left: 47.5%; padding-top: 5%; padding-bottom: 0%;" /></a>
@@ -240,7 +224,7 @@
   <div class="flourish-embed flourish-chart" data-src="visualisation/13888466" style="padding: 9%;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
     <button class="collapsible">Click to view more information   </button>
     <div class="content">
-    <p>Here, we can see the changes in growth rates among female and male authors in computer science related fields. It is clear that growth rates were higher in the years right after 2000 but had a sharp decline in 2011. Rates went backwards in 2021, which we can assume is likely due to the global pandemic. Use the buttons above the legend at the top to view individual genders.</p>
+    <p id='collapsible-p'>By looking at the authorship career lengths of men and women in this field, we were able to determine the average career lengths in days, which confirmed the idea that the average career length of a female author is shorter than that of a male author. Given the data we unearthed, we found that the career length of a female author is 27% shorter than that of a man.</p>
     </div>
 <!-- <a href="stats-container-2"><img src='scroll.gif' style="width: 70px; padding-left: 47.5%; padding-top: 5%; padding-bottom: 4%; background-color: black;" /></a> -->
     <a href='#tacobell'><img src='scroll.gif' style="width: 70px; margin-left: 47.5%; padding-top: 5%; padding-bottom: 0%;" /></a>
@@ -411,6 +395,22 @@ var x = setInterval(function() {
   }
 }, 1000);
 </script> -->
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+  </script>
 <script>
 		// Set the date we're counting down to
 		var countDownDate = new Date("2098-01-01T00:00:00").getTime();

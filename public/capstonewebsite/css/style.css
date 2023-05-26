@@ -188,10 +188,10 @@ body {
   background-color: black;
 }
 #anchor1 p {
-  font-size: 30px;
+  /* font-size: 30px;
   text-align: center;
   padding-right: 15%;
-  padding-left: 15%;
+  padding-left: 15%; */
 }
 
 #gradient3 {
@@ -422,6 +422,10 @@ p {
   transition: max-height 0.2s ease-out;
   color: white;
   background-color: black;
+}
+
+#collapsible-p {
+  font-size: 20px;
 }
 
 /* @-webkit-keyframes glow {
